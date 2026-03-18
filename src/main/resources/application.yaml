@@ -1,0 +1,30 @@
+
+### test properties with underscored names in hyphen and CamelCase notations:
+my:
+  props:
+    underscores:
+      propWithUnderscores1: prop-with-underscores-1 camelCase value yaml
+      propWithUnderscoresTwo: prop-with-underscores-two camelCase value yaml
+      list-prop-with-underscores-three:
+        - prop-with-underscores-three hyphen value1  yaml
+        - prop-with-underscores-three hyphen value2  yaml
+      inner_pojo:
+        pojo_prop: inner_pojo.pojo_prop underscore yaml
+      ## these properties are actually duplicates:
+      map-prop-with-underscores-four:
+         yaml-one: map yaml-one value
+         yaml_one: map yaml_one value
+         yamlOne: map yamlOne value
+      map_prop_with_underscores_four:
+         key1: map.key1 value yaml
+
+custom:
+  config:
+    my-prop-one: prop1 hyphen yaml
+    my-prop-two: prop2 hyphen yaml
+    my-prop-three: prop3 hyphen yaml
+
+
+spring:
+  application:
+    name: spring-boot-configprops-diff-notations-yaml
